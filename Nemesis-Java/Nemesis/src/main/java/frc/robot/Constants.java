@@ -4,7 +4,7 @@
 /* must be accompanied by the FIRST BSD license file in the root directory of */
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
-// Comment to test Git committing - JS
+
 package frc.robot;
 
 /**
@@ -16,7 +16,7 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 
-//test comment 2
+
 
 
 public final class Constants {

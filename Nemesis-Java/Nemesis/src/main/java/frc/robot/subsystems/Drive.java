@@ -10,6 +10,24 @@ public class Drive extends SubsystemBase {
     TalonFX L2 = new TalonFX (Constants.Drv_L2);
     TalonFX R1 = new TalonFX (Constants.Drv_R1);
     TalonFX R2 = new TalonFX (Constants.Drv_R2);
+
+    L1.setInverted(true);
+    L2.setInverted(true);
+
+    L2.set(ControlMode.Follower, L1.getDeviceID());
+    R2.set(ControlMode.Follower, R1.getDeviceID());
+
+    ConfigTalons(L1);
+    ConfigTalons(L2);
+    ConfigTalons(R1);
+    ConfigTalons(R2);
+  }
+
+  public void ConfigTalons(TalonFX falcon){
+
+    falcon.configPeakOutputForward(1.0, 0);
+    falcon.configPeakOutputReverse(-1.0, 0);
+
   }
 
   @Override

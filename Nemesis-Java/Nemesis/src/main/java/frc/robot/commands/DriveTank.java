@@ -9,11 +9,11 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
-public class DriveCommand extends CommandBase {
+public class DriveTank extends CommandBase {
   /**
-   * Creates a new DriveCommand.
+   * Creates a new DriveTank.
    */
-  public DriveCommand() {
+  public DriveTank() {
     // Use addRequirements() here to declare subsystem dependencies.
   }
 

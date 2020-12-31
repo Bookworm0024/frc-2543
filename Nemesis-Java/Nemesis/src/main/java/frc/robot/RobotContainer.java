@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj.XboxController;
 //import frc.robot.commands.ExampleCommand;
 //import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.subsystems.Drive;
 
 /**
  * This class is where the bulk of the robot should be declared.  Since Command-based is a
@@ -34,7 +35,10 @@ public class RobotContainer {
     // Configure the button bindings
     configureButtonBindings();
   }
-
+  private XboxController driverController = new XboxController(Constants.D_Controller);
+  public double GetDriverRawAxis(int axis){
+    return driverController.getRawAxis(axis);
+  }
   /**
    * Use this method to define your button->command mappings.  Buttons can be created by
    * instantiating a {@link GenericHID} or one of its subclasses ({@link
@@ -42,6 +46,7 @@ public class RobotContainer {
    * {@link edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
+    
   }
 
 
@@ -54,4 +59,6 @@ public class RobotContainer {
     // An ExampleCommand will run in autonomous
     return m_autoCommand;
   }*/
+
+  public static final Drive m_Drive = new Drive();
 }

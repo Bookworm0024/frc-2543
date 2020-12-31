@@ -40,4 +40,5 @@ public final class Constants {
     public static final int Turret_Vert2 = 5;
     public static final int Shifter1 = 6;
     public static final int Shifter2 = 7;
+	public static final int D_Controller = 0;
 }
